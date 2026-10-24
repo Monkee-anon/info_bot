@@ -32,6 +32,7 @@ async def start_web_server():
     print(f"Веб-сервер запущен на порту {port}")
 
 async def main():
+    asyncio.create_task(start_web_server())
 
     commands = [
         BotCommand(command="start", description="Запустить бота"),
